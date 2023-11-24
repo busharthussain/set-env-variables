@@ -15,7 +15,7 @@ class SetEnv extends GeneratorCommand
      *
      * @var string
      */
-    protected $signature = 'set:env';
+    protected $signature = 'set:env {key} {value?}';
 
     /**
      * The console command description.
@@ -26,6 +26,15 @@ class SetEnv extends GeneratorCommand
 
     protected $type = 'Env';
 
+    /**
+     * Get the stub file for the generator.
+     *
+     * @return string
+     */
+    protected function getStub()
+    {
+        return;
+    }
     /**
      * Determine what the supplied key and value is from the current command.
      *

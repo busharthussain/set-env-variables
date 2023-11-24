@@ -1,0 +1,33 @@
+{
+    "name": "bushart/set-env-variables",
+    "description": "laravel set env variable",
+    "type": "library",
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://github.com/busharthussain/set-env-variables"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "bushart\\SetEnvVariable\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "busharthussain",
+            "email": "busharthussain@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "bushart\\SetEnvVariable\\LaravelSetEnv"
+            ]
+        }
+    }
+}

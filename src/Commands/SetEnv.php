@@ -1,6 +1,6 @@
 <?php
 
-namespace bushart\MakeArtisan\Commands;
+namespace bushart\SetEnvVariable\Commands;
 
 use Illuminate\Support\Str;
 use InvalidArgumentException;

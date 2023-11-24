@@ -1,6 +1,6 @@
 <?php
 
-namespace bushart\MakeArtisan;
+namespace bushart\SetEnvVariable;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelSetEnv extends ServiceProvider

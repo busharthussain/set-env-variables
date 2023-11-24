@@ -27,6 +27,5 @@ class LaravelSetEnv extends ServiceProvider
     public function boot()
     {
 
-
     }
 }

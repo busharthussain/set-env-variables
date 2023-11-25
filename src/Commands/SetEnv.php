@@ -56,7 +56,7 @@ class SetEnv extends GeneratorCommand
             $value = $parts[1];
         }
 
-        if (! $this->isValidKey($key)) {
+        if (! $this->validateKey($key)) {
             throw new InvalidArgumentException('Invalid argument key');
         }
 
@@ -73,7 +73,7 @@ class SetEnv extends GeneratorCommand
      * @param string $key
      * @return boolean
      */
-    protected function isValidKey(string $key): bool
+    protected function validateKey(string $key): bool
     {
         if (str_contains($key, '=')) {
             throw new InvalidArgumentException("Environment key should not contain '='");
@@ -98,11 +98,7 @@ class SetEnv extends GeneratorCommand
         // Match the given key at the beginning of a line
         preg_match("/^{$key}=[^\r\n]*/m", $envFile, $matches);
 
-        if (count($matches)) {
-            return substr($matches[0], strlen($key) + 1);
-        }
-
-        return '';
+        return count($matches) ? substr($matches[0], strlen($key) + 1) : '';
     }
 
     /**
